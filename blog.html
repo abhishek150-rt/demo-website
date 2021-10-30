@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap');
+    html {
+ scroll-behavior: smooth;
+}
+      * {
+        box-sizing: border-box;
+        font-family: "Ubuntu", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-transform: capitalize;
+        font-family: 'Encode Sans', sans-serif;
+      }
+      .title {
+  position: relative;
+  top: 0;
+  line-height: 60px;
+}
+.title::after {
+  content: "";
+  background-color: #ff523b;
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+      nav {
+        font-family: 'STIX Two Math', serif;
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: 0px auto 20px auto;
+        display: flex;
+        background-color: #485461;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      nav h1 {
+        width: 20%;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        font-size: 45px;
+        animation: circle 2s linear infinite;
+      }
+      @keyframes circle {
+        form {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      ul {
+        overflow: hidden;
+        list-style: none;
+        padding: 10px;
+
+        color: white;
+      }
+
+      li {
+        position: relative;
+        color: #fff;
+        float: left;
+        margin-left: 30px;
+        padding: 10px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+li a{
+  color: white;
+  text-decoration: none;
+}
+      li::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: orangered;
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+      }
+
+      li:hover::before {
+        transform: scaleY(1);
+      }
+     
+   
+      .blog-container {
+        width: 90%;
+        margin: 50px auto 0px auto;
+        text-align: center;
+        padding: 15px;
+        background-color: #ffffff;
+        background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+      }
+     
+      .alert {
+  padding: 20px;
+  background-color: rgb(104, 104, 245);
+  color: white;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+  
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+ p{
+     font-weight: medium;
+     line-height: 30px;
+ }
+ .row{
+     /* border: 2px solid red; */
+     padding: 10px;
+     margin-top: 20px;
+ }
+ /* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding:10px;
+  /* border: 2px solid blue; */
+  text-align: center;
+}
+
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: all 0.8s;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+img {
+    width:90%;
+    height: 150px; 
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 5px 20px;
+  width: 100%;
+ 
+}
+.container p{
+    word-spacing: 2px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: justify;
+}
+.btn{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+}
+.btn button{
+background-color: orangered;
+padding: 5px;
+border-radius: 5px;
+border: none;
+width: 100%;
+outline: none;
+color: white;
+cursor: pointer;
+}
+.btn button:hover{
+    background-color: #28313b;
+}
+.pagination {
+  display: inline-block;
+  margin: 20px ;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;box-shadow: 5px 5px 10px grey;}
+footer {
+  margin:20px 0;
+  
+}
+ @media screen and (max-width:850px) {
+        nav {
+          width: 100%;
+          position: static;
+        }
+        li {
+          display: block;
+          float: none;
+          width: 25%;
+          margin: auto;
+          text-align: center;
+          font-size: 15px;
+        }
+        nav h1 {
+          display: none;
+        }
+        .alert {
+    
+    width: 100%;
+}
+        .blog-container{
+            width: 100%;
+            padding: 0px;
+
+        }
+        .column{
+            float: none;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .card{
+            padding: 0px;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1><i class="fas fa-snowflake"></i></h1>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li>About</li>
+        <li>Services</li>
+        <li><a href="#blog">Blog</a></li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <strong>Info! Website usage cookies for better experience..</strong> 
+         </div>
+    <div class="blog-container" id="blog">
+
+    
+      <h2  style="margin-top: 50px" class="title">Latest From Our Blog</h2>
+      <p  style="margin-top: 20px">
+        You can relay on our amazing features list and also our customer services <br> will be great experience for you without doubt
+      </p>
+      <hr>
+      <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/What is Blog Who is Blogger How Blogging Works How to Start A Successful Blog.png" alt="Avatar" >
+                <div class="container">
+                  <h4><b>Blog</b></h4>
+                  <p>A blog is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries. Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. Click on button below to read more about blogs.</p>
+                  <div class="btn">
+                    <button>Read More</button>
+                </div>
+                </div>
+              
+
+              </div>
+        </div>
+      
+        <div class="column">
+            <div class="card">
+                <img src="/Habits.jpg" alt="Avatar" >
+                <div class="container">
+                  <h4><b>Habits</b></h4>
+                  <p>A habit is a routine of behavior that is repeated regularly and tends to occur subconsciously. The American Journal of Psychology defined a "habit, from the standpoint of psychology, [as] a more or less fixed way of thinking, willing, or feeling acquired through previous repetition of a mental experienc and anxiety issues."</p>
+                  <div class="btn">
+                    <button>Read More</button>
+                </div>
+                </div>
+              </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <img src="/Inna-Kay.blog-Life-blogger-lifestyle-Business-Good-bye-Social-media-Hello-reality-social-media-marketing-influencers.jpg" alt="Avatar" >
+                <div class="container">
+                  <h4><b>Social Media</b></h4>
+                  <p>Social media are interactive technologies that allow the creation or sharing/exchange of information, ideas, career interests, and other forms of expression via virtual communities and networks. Nowadays it has lots of impact on business and lifestyle of peopel and they are making tons of money out of it and flexing.</p>
+                  <div class="btn">
+                    <button>Read More</button>
+                </div>
+                </div>
+              </div>
+        </div>
+     
+      </div>
+      <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/blogging_image.jpg" alt="Avatar" >
+                <div class="container">
+                  <h4><b>Blog</b></h4>
+                  <p>A blog is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries. Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. Click on button below to read more about blogs.</p>
+                  <div class="btn">
+                    <button>Read More</button>
+                </div>
+                </div>
+              
+
+              </div>
+        </div>
+      
+        <div class="column">
+            <div class="card">
+                <img src="/Habits.jpg" alt="Avatar" >
+                <div class="container">
+                  <h4><b>Habits</b></h4>
+                  <p>A habit is a routine of behavior that is repeated regularly and tends to occur subconsciously. The American Journal of Psychology defined a "habit, from the standpoint of psychology, [as] a more or less fixed way of thinking, willing, or feeling acquired through previous repetition of a mental experience & anxiety issues."</p>
+                  <div class="btn">
+                    <button>Read More</button>
+                </div>
+                </div>
+              </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <img src="/Inna-Kay.blog-Life-blogger-lifestyle-Business-Good-bye-Social-media-Hello-reality-social-media-marketing-influencers.jpg" alt="Avatar" >
+                <div class="container">
+                  <h4><b>Social Media</b></h4>
+                  <p>Social media are interactive technologies that allow the creation or sharing/exchange of information, ideas, career interests, and other forms of expression via virtual communities and networks. Nowadays it has lots of impact on business and lifestyle of peopel and they are making tons of money out of it and flexing.</p>
+                  <div class="btn">
+                    <button>Read More</button>
+                </div>
+                </div>
+              </div>
+        </div>
+     
+      </div>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </div>
+
+    
+    <footer id="foot">
+        <div class="links" style="text-align: center; margin: 20px 0;">
+          <a href="https://www.geeksforgeeks.org/about/" style="font-weight: bolder;">About Us</a>|
+          <a href="https://www.geeksforgeeks.org/privacy-policy/" style="font-weight: bolder;">Privacy Policy</a>|
+          <a href="https://www.geeksforgeeks.org/careers/" style="font-weight: bolder;">Careers</a>
+        </div>
+        <p style="text-align: center;">Copyright &copy; Abhishek Negi 2021-22</p>
+      </footer>
+      <div class="back-to-top" style="text-align: right;">
+ 
+        <a href="#" style="margin-right:50px;" ><i class="fas fa-arrow-circle-up" style="border-radius: 50%;  font-size: 30px;"></i></a>
+        <h2>Jump to top</h2>
+    
+    </div>
+  </body>
+</html>

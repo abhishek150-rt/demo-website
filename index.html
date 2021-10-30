@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="keywords" content="Html layout, css , js" />
+  <meta name="description" content="html webpage simple layout" />
+  <meta name="author" content="Abhishek" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+
+</head>
+
+<body>
+
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="pngkey.com-avatar-png-1149878.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="form-container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required id="myPassword">
+        <label>
+          <input type="checkbox"  name="show" onclick="passwordFunction()" > Show Password
+        </label>
+        <button type="submit">Login</button>
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label> -->
+       
+      </div>
+  
+      <div class="form-container" style="background-color:#f1f1f1">
+        <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <div class="icon-container">
+    <div class="left-icon-con">
+      <i class="fas fa-2x fa-phone-alt"></i>
+      <span>+91 95485-82343 | +91 79000-394954</span>
+    </div>
+    <div class="center-icon-con">
+      <i class="fas fa-2x fa-envelope"></i>
+    </div>
+    <div class="right-icon-con">
+    <a href="https://www.facebook.com/abi.negi.10" target="_blank"> <i class="fab fa-2x fa-facebook icon"></i></a>
+      <a href="https://twitter.com/Abhishe19007972" target="_blank" ><i class="fab fa-2x fa-twitter icon"></i></a>
+     <a href=" https://www.instagram.com/abhishek_not_avishake/ " target="_blank"><i class="fab fa-2x fa-instagram icon"></i></a>
+      <i class="fab fa-2x fa-linkedin icon"></i>
+    </div>
+  </div>
+  <header>
+    <div id="logo">
+      <h1 class="glow"><i class="fas fa-camera-retro"></i></h1>
+    </div>
+    <nav id="menu-bar">
+      <ul>
+        <li><i class="fa fa-fw fa-home"  style="margin-right:  5px;"></i><a href="#">Home</a></li>
+        <li ><i class="fas fa-address-card"  style="margin-right:  5px;"></i><a href="#about">About Us</a></li>
+        <li ><i class="fas fa-blog"  style="margin-right:  5px;"></i><a href="/blog.html">Blog</a></li>
+        <li  ><i class="fa fa-fw fa-envelope"  style="margin-right:  5px;"></i><a href="/contact.html">Contact</a></li>
+      </ul> 
+    </nav>
+    <div id="btn">
+      <button  onclick="document.getElementById('id01').style.display='block'">Login</button>
+      <button><a href="/signup.html">Signup</a></button>
+    </div>
+    <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="slideshow-container">
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">1/ 3</div>
+  <img src="Loki2.jpg">
+  <div class="text">Caption One</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2/ 3</div>
+  <img src="Loki4.jpg">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3/ 3</div>
+  <img src="Loki5.jpg">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <hr>
+  <main>
+  
+    <div class="left">
+      <section>
+            <h1 style="text-align: center; margin:20px 0;" class="title" id="about">About</h1>
+        <img src="pngfind.com-loki-png-882897.png" alt="" style="width: 250px;">
+        <p>Loki, in <span style="color:green; font-weight: bolder;">Norse mythology</span>, a cunning trickster who had the ability to change his shape and sex. Although his father was the giant Fárbauti, he was included among the <span style="color:green; font-weight: bolder;">Aesir</span> (a tribe of gods). Loki was represented as the companion of the great gods <span style="color:rgb(231, 97, 63); font-weight: bolder;">Odin</span> and <span style="color:rgb(0, 30, 128); font-weight: bolder;">Thor</span>, helping them with his clever plans but sometimes causing embarrassment and difficulty for them and himself. He also appeared as the enemy of the gods, entering their banquet uninvited and demanding their drink. He was the principal cause of the death of the god Balder. Loki was bound to a rock (by the entrails of one or more of his sons, according to some sources) as punishment, thus in many ways resembling the Greek figures <span style="color:green; font-weight: bolder;">Prometheus</span> and <span style="color:green; font-weight: bolder;"> Tantalus.</span>Also like Prometheus, Loki is considered a god of fire</p>
+        <br>
+        <p>With the female giant Angerboda (Angrboda: “Distress Bringer”), Loki produced the progeny Hel, the goddess of death; Jörmungand, the serpent that surrounds the world; and Fenrir (Fenrisúlfr), the wolf. Loki is also credited with giving birth to Sleipnir, Odin’s eight-legged horse.
+        </p>
+      </section>
+      <article>
+        <hr>
+        <h1 style="text-align: center; margin: 20px 0;" class="title">Article</h1>
+        <p>Loki is an American television series created by Michael Waldron for the streaming service Disney+, based on Marvel Comics featuring the character of the same name. It is the third television series in the Marvel Cinematic Universe (MCU) produced by Marvel Studios, sharing continuity with the films of the franchise. The series takes place after the events of the film Avengers: Endgame (2019), in which an alternate version of Loki created a new timeline. Waldron serves as head writer, with Kate Herron directing for the first season.
+        </p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/nW948Va-l10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+    </div>
+    <div class="right">
+      <aside>
+        <h1 style="text-align: center; margin: 20px 0;" class="title">Aside</h1>
+        <!-- <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui blanditiis quis temporibus commodi! Sed temporibus, fuga soluta tempora consequuntur totam vel assumenda architecto labore minima beatae dolorum minus, incidunt, rem ipsam? Possimus fuga asperiores eius. Tempora qui, eveniet esse ipsum maiores, necessitatibus odit sit voluptatem dolor id accusamus ducimus beatae!
+        </p> -->
+        <ul>
+          <li><a href="#">Worldwide Foundation for Credit Unions Distributes 30,000 Masks Through Second Wave of Project
+              Storm Break PPE Initiative</a></li>
+          <li><a href="#">Elissa McCarter LaBorde Named Next President and CEO of World Council</a></li>
+          <li><a href="#">Eight Scholarships Awarded by Global Women’s Leadership Network</a></li>
+          <li><a href="#">World Council Launches ‘The Global Credit Union Podcast’</a></li>
+          <li><a href="#">Worldwide Foundation for Credit Unions Distributes 30,000 Masks Through Second Wave of Project
+              Storm Break PPE Initiative</a></li>
+          <li><a href="#">Elissa McCarter LaBorde Named Next President and CEO of World Council</a></li>
+          <li><a href="#">Eight Scholarships Awarded by Global Women’s Leadership Network</a></li>
+          <li><a href="#">World Council Launches ‘The Global Credit Union Podcast’</a></li>
+          <li><a href="#">Worldwide Foundation for Credit Unions Distributes 30,000 Masks Through Second Wave of Project
+              Storm Break PPE Initiative</a></li>
+          <li><a href="#">Elissa McCarter LaBorde Named Next President and CEO of World Council</a></li>
+          <li><a href="#">Eight Scholarships Awarded by Global Women’s Leadership Network</a></li>
+          <li><a href="#">World Council Launches ‘The Global Credit Union Podcast’</a></li>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <hr>
+  <h2 style="text-align: center; margin: 10px 0;" class="title">Responsive Section Counter</h2>
+<br>
+
+<div id="row">
+  <div class="column">
+    <div class="card-2">
+      <p><i class="fa fa-user"></i></p>
+      <h3>11+</h3>
+      <p>Partners</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card-2">
+      <p><i class="fa fa-check"></i></p>
+      <h3>55+</h3>
+      <p>Projects</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card-2">
+      <p><i class="fa fa-user"></i></p>
+      <h3>100+</h3>
+      <p>Happy Clients</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card-2">
+      <p><i class="fa fa-coffee"></i></p>
+      <h3>100+</h3>
+      <p>Meetings</p>
+    </div>
+  </div>
+</div>
+<hr>
+<h2  style="text-align: center; margin-top:50px" class="title">Testimonial</h2>
+<div class="testimonial">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-3">
+        <p>
+          <i class="fas fa-quote-left"></i>
+         Whose Balls did i have to fondle to get my own movie?
+         i can't tell you his name, but it rhymes with<br>
+         <span style="color: red;">PULLVERINE</span>
+          <i class="fas fa-quote-right"></i>
+        </p>
+       
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <img src="deadpool.png" alt="" />
+        <h4>Deadpool</h4>
+      </div>
+      <div class="col-3">
+        <p>
+          <i class="fas fa-quote-left"></i>
+          "So long as life remains, there is always hope... and so long as there is hope, there can be victory!"
+          <i class="fas fa-quote-right"></i>
+        </p>
+       
+        <div class="rating">
+          <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        </div>
+        <img src="wonder-women.png" alt="" />
+        <h4>Wonder Women</h4>
+      </div>
+      <div class="col-3">
+        <p>
+          <i class="fas fa-quote-left"></i>
+          John is a man of focus, commitment, sheer will...something you know very little about. I once saw him kill three men in a bar with a pencil. With a f*cking pencil!
+          <i class="fas fa-quote-right"></i>
+        </p>
+
+        
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <img src="John-Wick.png" alt="" />
+        <h4>John Wick</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+  <footer id="foot">
+    <div class="links" style="text-align: center; margin: 20px 0;">
+      <a href="https://www.geeksforgeeks.org/about/">About Us</a>|
+      <a href="https://www.geeksforgeeks.org/privacy-policy/">Privacy Policy</a>|
+      <a href="https://www.geeksforgeeks.org/careers/">Careers</a>
+    </div>
+    <p style="text-align: center;">Copyright &copy; Abhishek Negi 2021-22</p>
+  </footer>
+
+<div class="back-to-top" style="text-align: right;">
+ 
+    <a href="#" style="margin-right:50px;" ><i class="fas fa-arrow-circle-up" style="border-radius: 50%;  font-size: 30px;"></i></a>
+    <h2>Jump to top</h2>
+
+</div>
+ 
+
+
+  <!-- <button onclick="myFunction()">Try it</button> -->
+
+<!-- <div id="myDIV" class="div-1" onmousemove="myFunction()">
+  This is a DIV element.
+</div> -->
+
+
+</body>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+<script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  let menu=document.getElementById("menu-bar");
+  if(menu.style.display=="none"){
+    menu.style.display="block";
+    // menu.style.transition = "all 5s";
+  }
+   else{
+    menu.style.display="none";
+  }
+  let button=document.getElementById("btn");
+  if (button.style.display ==  "none") {
+    button.style.display="block"
+    
+  }
+  else{
+    button.style.display="none"
+  }
+}
+</script>
+<script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementsByClassName("icon-container")[0].style.padding = "20px";
+      document.getElementsByClassName("icon-container")[0].style.fontSize = "15px";
+    } else {
+      document.getElementsByClassName("icon-container")[0].style.padding = "10px";
+      document.getElementsByClassName("icon-container")[0].style.fontSize = "13px";
+    }
+  }
+  </script>
+
+<script>
+  function passwordFunction() {
+    var x = document.getElementById("myPassword");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+  </script>
+  <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</html>
